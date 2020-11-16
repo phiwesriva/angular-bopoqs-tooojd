@@ -1,0 +1,80 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm.value)">
+<table id="t03" class="center" style="width:100%" layout-align="center center">
+  <tr>
+  <td colspan="2"><h1>We Would Like To Hear From You</h1></td>
+</tr>
+
+<tr>
+  <td colspan="2"><p> <label for="email">Email us on:</label> info@soduhlux.co.za <label for="cell">Call us on :</label>  +27(0)78 167 2830</p></td>
+</tr>
+
+<tr>
+  <td><label for="nameandsurname">Name:*</label>
+  <input minlength="4"id="nameandsurname" type="text" formControlName="nameandsurname" required></td>
+<div *ngIf="nameandsurname.invalid && (nameandsurname.dirty || nameandsurname.touched)"
+    class="alert alert-danger">
+
+  <div *ngIf="nameandsurname.errors.required">
+    Name is required.
+  </div>
+  <div *ngIf="nameandsurname.errors.minlength">
+    Name must be at least 4 characters long.
+  </div>
+</div>
+</tr>
+<tr>
+  <td><label for="Cname">Company Name(If applicable):</label>
+  <input minlength="4" id="Cname" type="text" formControlName="Cname"></td>
+</tr>
+
+<tr>
+  <td><label for="Cnumber">Contact Number:*</label><input minlength="2" id="Cnumber" type="tel" formControlName="Cnumber" required></td>
+<div *ngIf="Cnumber.invalid && (Cnumber.dirty || Cnumber.touched)"
+    class="alert alert-danger">
+
+  <div *ngIf="Cnumber.errors.required">
+    Contact Number is required.
+  </div>
+  <div *ngIf="Cnumber.errors.minlength">
+    Contact Number must be at least 4 characters long.
+  </div>
+</div>
+<tr>
+  <td><label for="Eaddress">Email Address:</label>
+  <input id="Eaddress" type="email" formControlName="Eaddress"></td>
+</tr>
+<tr>
+
+  <td><label for="areaofinterest">Area of interest:*</label>
+  <select matNativeControl formControlName="areaofinterest" required id="areaofinterest">
+<option >What would you like to find out</option>
+<option >Compliments</option>
+<option >Complaints</option>
+<option >Questions</option>
+<option >Other</option>
+  </select></td>
+</tr>
+
+<tr> 
+   <td><label for="Info">Tell us more *</label>
+     <input id="Info" type="textarea" rows="10" cols="35" formControlName="Info" required></td>
+  </tr>
+
+<!--<tr>
+  <td colspan="2"><button class="button2" type="submit" [disabled]="!contactForm.valid" >SUBMIT</button></td>
+</tr>-->
+
+<tr>
+  <td colspan="2"><button class="button2" type="submit" >SUBMIT</button></td>
+ </tr>
+
+  </table>
+
+ <!-- <p>
+  Form Status: {{ profileForm.status }}
+</p>-->
+
+</form>
+
+  <label for="name">Our Address: Groblersdal</label>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.1670440290786!2d29.38037331500878!3d-25.16383688391171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec0350fce6dd18d%3A0xd0fa8d265270d46e!2sBlesbok%20St%2C%20Groblersdal%2C%200470%2C%20South%20Africa!5e0!3m2!1sen!2snz!4v1600065990449!5m2!1sen!2snz" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>

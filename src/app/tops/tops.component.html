@@ -1,0 +1,90 @@
+<div *ngFor="let product of products; index as productId">
+  <h3><a [title]="product.name + ' details'" [routerLink]="['/products', productId]">
+      {{ product.name }}</a>
+  </h3>
+  <p *ngIf="product.description">
+    Description: {{ product.description }}
+  </p>
+</div>
+
+<!--
+
+<div class="container">
+<table class="center" style="width:100%" id="t01" >
+  <tr>
+    <th colspan="5"><h1 align="center">Tops!!!</h1></th></tr>
+    <tr>
+    <td><img src = "https://raw.githubusercontent.com/phiwesriva/angular-xv4yjj-cas1wh/master/src/assets/tb2.jpg" height="320" width="300"></td>
+    <td><img src = "https://raw.githubusercontent.com/phiwesriva/angular-xv4yjj-cas1wh/master/src/assets/tb2.jpg" height="320" width="300"></td>
+    <td><img src = "https://raw.githubusercontent.com/phiwesriva/angular-xv4yjj-cas1wh/master/src/assets/tb2.jpg" height="320" width="300"></td>
+  </tr>
+ 
+    <tr>
+    <td>Crop Top</td>
+    <td>Sleveless top</td>
+    <td>long sleeve top</td>
+  </tr>
+ 
+    <tr>
+    <td>R300</td>
+    <td>R400</td>
+    <td>R350</td>
+ </tr>
+
+ 
+    <tr>
+    <td><img src = "https://raw.githubusercontent.com/phiwesriva/angular-xv4yjj-cas1wh/master/src/assets/tb2.jpg" height="320" width="300"></td>
+    <td><img src = "https://raw.githubusercontent.com/phiwesriva/angular-xv4yjj-cas1wh/master/src/assets/tb2.jpg" height="320" width="300"></td>
+    <td><img src = "https://raw.githubusercontent.com/phiwesriva/angular-xv4yjj-cas1wh/master/src/assets/tb2.jpg" height="320" width="300"></td>
+  </tr>
+ 
+    <tr>
+    <td>Crop Top</td>
+    <td>Sleveless top</td>
+    <td>long sleeve top</td>
+  </tr>
+ 
+    <tr>
+    <td>R300</td>
+    <td>R400</td>
+    <td>R350</td>
+    </tr>
+  
+    <tr>
+    <td><img src = "https://raw.githubusercontent.com/phiwesriva/angular-xv4yjj-cas1wh/master/src/assets/tb2.jpg" height="320" width="300"></td>
+    <td><img src = "https://raw.githubusercontent.com/phiwesriva/angular-xv4yjj-cas1wh/master/src/assets/tb2.jpg" height="320" width="300"></td>
+    <td><img src = "https://raw.githubusercontent.com/phiwesriva/angular-xv4yjj-cas1wh/master/src/assets/tb2.jpg" height="320" width="300"></td>
+  </tr>
+
+    <tr>
+    <td>Crop Top</td>
+    <td>Sleveless top</td>
+    <td>long sleeve top</td>
+  </tr>
+ 
+    <tr>
+    <td>R300</td>
+    <td>R400</td>
+    <td>R350</td>
+     </tr>
+
+    <tr>
+    <td><img src = "https://raw.githubusercontent.com/phiwesriva/angular-xv4yjj-cas1wh/master/src/assets/tb2.jpg" height="320" width="300"></td>
+    <td><img src = "https://raw.githubusercontent.com/phiwesriva/angular-xv4yjj-cas1wh/master/src/assets/tb2.jpg" height="320" width="300"></td>
+    <td><img src = "https://raw.githubusercontent.com/phiwesriva/angular-xv4yjj-cas1wh/master/src/assets/tb2.jpg" height="320" width="300"></td>
+  </tr>
+    <tr>
+    <td>Crop Top</td>
+    <td>Sleveless top</td>
+    <td>long sleeve top</td>
+  </tr>
+ 
+    <tr>
+    <td>R300</td>
+    <td>R400</td>
+    <td>R350</td>
+
+
+</table>
+</div>
+-->

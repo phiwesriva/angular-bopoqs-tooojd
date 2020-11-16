@@ -1,0 +1,415 @@
+
+/* Global Styles */
+
+* {
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #616161;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+#t01, td {
+  width: 100%;
+ /* background-color: #f1f1c1;
+  box-shadow: 0 0 2px 1px #d2a719;
+  border-collapse: collapse;*/
+}
+
+#t02, td {
+  width: 100%;
+  /*background-color: #f1f1c1;*/
+}
+
+#t03, td {
+  width: 100%;
+  text-align: center;
+/*  background-color: #f1f1c1;*/
+}
+
+#t04, td {
+  width: 100%;
+  text-align: center;
+  /*background-color: #f1f1c1;*/
+}
+
+body {
+  margin: 0;
+}
+
+/*.container {
+  display: flex;
+  flex-direction: row;
+}*/
+
+#box2 {
+  width: 200px;
+  height: 300px; 
+  background-color: #96C; 
+  float:left;}
+
+#box3 
+{width: 600px; 
+height: 300px; 
+background-color: #0CF; 
+float:right;}
+
+router-outlet + *  {
+  padding: 0 16px;
+}
+
+/* Text */
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #d2a719; /* red */
+}
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h1, h2 {
+  font-weight: lighter;
+}
+
+p {
+  font-size: 14px;
+}
+
+/* Hyperlink */
+
+a {
+  font-family: 'Roboto', Arial, sans-serif;
+  cursor: pointer;
+  color: #616161;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+
+/*
+body, html {
+  height: 100%;
+}
+
+.bg {
+  /* The image used 
+  background-image: url("img_girl.jpg");
+
+  /* Full height 
+  height: 50%;
+
+  /* Center and scale the image nicely
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+*/
+/* Input */
+
+input {
+  font-size: 14px;
+  border-radius: 2px;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #BDBDBD;
+}
+
+label {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  display: block;
+  text-transform: uppercase;
+}
+
+/* Button */
+.button1, .button1 {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 2px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #2dbb10;
+  color: white;
+  border: none;
+}
+
+.button, button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 2px;
+  font-size: 14px;
+  cursor: pointer;
+  /*background-color: #1976d2;*/
+  color: #616161;
+  border: none;
+}
+
+.button:hover, button:hover {
+  opacity: 0.8;
+  font-weight: normal;
+}
+
+.button:disabled, button:disabled {
+  opacity: 0.5;
+  cursor: auto;
+}
+
+/* Fancy Button */
+
+.fancy-button {
+  /*background-color: white;*/
+  color: #616161;
+}
+
+.fancy-button i.material-icons {
+  color: #616161;
+  padding-right: 4px;
+}
+
+/* Top Bar */
+
+app-top-bar {
+  width: 100%;
+  height: 68px;
+ /* background-color: #1976d2;*/
+  /*padding: 16px;*/
+  display: flex;
+  flex-direction: row;
+  /*justify-content: space-between;*/
+  align-items: center;
+}
+
+app-top-bar h1 {
+  color: white;
+  margin: 0;
+}
+
+app-footer {
+  width: 100%;
+height: auto;
+/*background-color: #050505;*/
+/*padding: 1px;*/
+display: flex;
+flex-direction: row;
+/*justify-content: space-between;*/
+align-items: center;
+
+}
+
+/*.container {
+  position: relative;
+  max-width: 900px; /*Maximum width */ 
+  /*margin: 0 auto; /* Center it */
+  /*display: flex;*/
+  /*flex-direction: row;*/ 
+  /*align-items: center;
+
+}
+
+.container .content {
+  position: absolute; /* Position the background text */
+  /*bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  /*background: rgb(0, 0, 0); /* Fallback color */
+  /*background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  /*color: #f1f1f1; /* Grey text */
+  /*width: 100%; /* Full width */
+  /*padding: 10px; /* Some padding */
+/*}
+
+
+/* Checkout Cart, Shipping Prices */
+
+.cart-item, .shipping-item {
+  width: 100%;
+  min-width: 400px;
+  max-width: 450px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px 32px;
+  margin-bottom: 8px;
+  border-radius: 2px;
+  background-color: rgb(180, 40, 40);
+}
+
+.container {
+  position: relative;
+  max-width: 900px; /*Maximum width */ 
+  margin: 0 auto; /* Center it */
+  /*display: flex;*/
+  /*flex-direction: row;*/ 
+  align-items: center;
+
+}
+
+.container .content {
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 94%; /* Full width */
+  padding: 10px; /* Some padding */
+}
+
+/* Bottom left text
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}*/
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Bottom right text
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}*/
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#u01 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #d2a719; /* red */
+}
+
+/*Navigation*/
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+ /* background-color: #050505;*/
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: #d2a719;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #4CAF50;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
+/*
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari 
+  position: sticky;
+  top: 0;
+}*/
+
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: black;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  /*min-width: 160px;*/
+  
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+    padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+html{
+overflow-y: scroll;}
+
+
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+*/
