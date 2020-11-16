@@ -21,7 +21,7 @@ export class InMemoryDataService implements InMemoryDbService {
       //{ id: 20, name: 'Tornado' }
     //];
 
-    const product = [
+    const products = [
   {
     name: 'Dress',
     price: 799,
@@ -65,7 +65,7 @@ export class InMemoryDataService implements InMemoryDbService {
   }
 ];
     //return {heroes};
-    return {product};
+    return {products};
   }
 
   // Overrides the genId method to ensure that a hero always has an id.
@@ -75,7 +75,7 @@ export class InMemoryDataService implements InMemoryDbService {
   // hero id + 1.
   //genId(heroes: Hero[]): number {
     //return heroes.length > 0 ? Math.max(...heroes.map(hero => hero.id)) + 1 : 11;
-  genId(product: Products[]): number {
-    return product.length > 0 ? Math.max(...product.map(products => products.id)) + 1 : 11;
+  genId(products: Products[]): number {
+    return products.length > 0 ? Math.max(...products.map(products => products.id)) + 1 : 11;
   }
 }

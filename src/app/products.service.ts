@@ -8,7 +8,7 @@ import { Products } from './products';
 
 @Injectable({ providedIn: 'root' })
 export class ProductsService {
-  private productUrl = 'api/product';  // URL to web api
+  private productsUrl = 'api/products';  // URL to web api
 
 httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -18,24 +18,24 @@ httpOptions = {
   private messageService: MessageService) { }
 
     /** GET Product from the server */
-  getProduct(): Observable<Products> {
-  return this.http.get<Products>(this.productUrl)
+  getProducts(): Observable<Products> {
+  return this.http.get<Products>(this.productsUrl)
     .pipe(
-      catchError(this.handleError<Products>('getProduct', []))
+      catchError(this.handleError<Products>('getProducts', []))
     );
 }
 
  /* GET Product whose name contains search term */
-  searchProduct(term: string): Observable<Products[]> {
+  searchProducts(term: string): Observable<Products[]> {
     if (!term.trim()) {
       // if not search term, return empty Product array.
       return of([]);
     }
-    return this.http.get<Products[]>(`${this.productUrl}/?name=${term}`).pipe(
+    return this.http.get<Products[]>(`${this.productsUrl}/?name=${term}`).pipe(
       tap(x => x.length ?
-         this.log(`found product matching "${term}"`) :
-         this.log(`no product matching "${term}"`)),
-      catchError(this.handleError<Products[]>('searchProduct', []))
+         this.log(`found products matching "${term}"`) :
+         this.log(`no products matching "${term}"`)),
+      catchError(this.handleError<Products[]>('searchProducts', []))
     );
   }
 
