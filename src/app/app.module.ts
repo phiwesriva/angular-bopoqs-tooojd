@@ -62,6 +62,7 @@ import { SearchComponent } from './search/search.component';
       { path: 'dresses', component: DressesComponent },
       { path: 'about', component: AboutComponent },
       { path: 'shipping', component: ShippingComponent },
+      { path: 'search', component: SearchComponent },
       { path: 'hero-search', component: HeroSearchComponent },
          ])
   ],

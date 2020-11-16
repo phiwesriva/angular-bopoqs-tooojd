@@ -4,8 +4,8 @@
   <input #searchBox id="search-box" (input)="search(searchBox.value)" />
 
   <ul class="search-result">
-    <li *ngFor="let hero of products$ | async" >
-      <a routerLink="/detail/{{product.id}}">
+    <li *ngFor="let products of products$ | async" >
+      <a routerLink="/detail/{{product.price}}">
         {{product.name}}
       </a>
     </li>

@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { MessageService } from './message.service';
-import { Products } from './products';
+import { products } from './products';
 
 
 @Injectable({ providedIn: 'root' })
@@ -18,24 +18,24 @@ httpOptions = {
   private messageService: MessageService) { }
 
     /** GET Product from the server */
-  getProducts(): Observable<Products> {
-  return this.http.get<Products>(this.productsUrl)
+  getProducts(): Observable<products> {
+  return this.http.get<products>(this.productsUrl)
     .pipe(
-      catchError(this.handleError<Products>('getProducts', []))
+      catchError(this.handleError<products>('getProducts', []))
     );
 }
 
  /* GET Product whose name contains search term */
-  searchProducts(term: string): Observable<Products[]> {
+  searchProducts(term: string): Observable<products[]> {
     if (!term.trim()) {
       // if not search term, return empty Product array.
       return of([]);
     }
-    return this.http.get<Products[]>(`${this.productsUrl}/?name=${term}`).pipe(
+    return this.http.get<products[]>(`${this.productsUrl}/?name=${term}`).pipe(
       tap(x => x.length ?
          this.log(`found products matching "${term}"`) :
          this.log(`no products matching "${term}"`)),
-      catchError(this.handleError<Products[]>('searchProducts', []))
+      catchError(this.handleError<products[]>('searchProducts', []))
     );
   }
 
